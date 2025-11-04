@@ -1,3 +1,6 @@
+*******************************
+[rewrite_local]
+# > Wink Pro /@biguu.dev
 ^https?:\/\/api-sub\.meitu\.com\/v2\/user\/vip_info_by_group\.json url script-response-body
 [mitm] 
 hostname = api-sub.meitu.com
