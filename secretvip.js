@@ -1,12 +1,10 @@
 /******************************
 [rewrite_local]
 # > Wink Vip BiguuDev
-^https?:\/\/api-sub\.meitu\.com\/v2\/user\/vip_info_by_group\.json url script-response-body
+^https?:\/\/api-sub\.meitu\.com\/v2\/user\/info_by_entrance\.json url script-response-body
 [mitm] 
 hostname = api-sub.meitu.com
 *******************************/
-
-
 
 {
   "code": 0,
