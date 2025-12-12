@@ -24,6 +24,6 @@ hostname = api-sub.meitu.com
     "in_trial_period": false,
     "in_grace_period": true
   },
-  "request_id": "ec46c484507048139023381c49036660",
+  "request_id": "",
   "success": true
 }
