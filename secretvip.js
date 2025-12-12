@@ -11,7 +11,7 @@ hostname = api-sub.meitu.com
   "error_code": "00000",
   "message": "success",
   "data": {
-    "account_type": 2,
+    "account_type": 1,
     "account_id": "1230818232",
     "is_vip": true,
     "use_vip": true,
