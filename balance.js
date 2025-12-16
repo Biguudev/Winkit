@@ -1,11 +1,3 @@
-/******************************
-[rewrite_local]
-# > Wink Mở khóa tư cách thành viên vĩnh viễn
-^https?:\/\/api-sub\.meitu\.com\/v2\/user\/vip_info_by_group\.json url script-response-body
-[mitm] 
-hostname = api-sub.meitu.com
-*******************************/
-
 {
   "code": 0,
   "error_code": "00000",
