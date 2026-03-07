@@ -1,27 +1,20 @@
-/******************************
-[rewrite_local]
-# > Wink Vip BiguuDev
-^https?:\/\/api-sub\.meitu\.com\/v2\/user\/info_by_entrance\.json url script-response-body
-[mitm] 
-hostname = api-sub.meitu.com
-*******************************/
+var body = $response.body;
+var obj = JSON.parse(body);
 
-{
-  "code": 0,
-  "error_code": "00000",
-  "message": "success",
-  "data": {
-    "account_type": 1,
-    "account_id": "1230818232",
-    "is_vip": true,
-    "use_vip": true,
-    "limit_type": 0,
-    "have_valid_contract": true,
-    "show_renew_flag": false,
-    "show_renew_flag_abroad": false,
-    "in_trial_period": false,
-    "in_grace_period": true
-  },
-  "request_id": "",
-  "success": true
+if (obj && obj.data) {
+
+  // Force VIP
+  obj.data.is_vip = true;
+  obj.data.vip_type = 1;
+
+  // Enable premium tools
+  obj.data.can_use_premium = true;
+  obj.data.is_pro = true;
+  obj.data.premium = true;
+
+  // Future expiry
+  obj.data.vip_expire_time = 4092599349000;
+
 }
+
+$done({ body: JSON.stringify(obj) });
